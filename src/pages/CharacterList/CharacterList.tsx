@@ -13,6 +13,7 @@ export const CharacterList: React.FC<Props> = (props) => {
 
   useEffect(() => {
     (async () => {
+      console.log("effect");
       const apiReader = new MarvelApiReader();
       const realPage = page + 1;
       const data = await apiReader.getCharacters(20, (realPage - 1) * 20);
@@ -22,10 +23,15 @@ export const CharacterList: React.FC<Props> = (props) => {
   }, [page]);
 
   return (
-    <div ref={scrollerRef} className="character-list-container">
-      {items.map((character) => (
-        <CharacterBox {...character} key={character.id} />
-      ))}
+    <div ref={scrollerRef} className="scroller">
+      <div className="header-container">
+        <div className="header-text">Marvel Characters</div>
+      </div>
+      <div className="character-list-container">
+        {items.map((character) => (
+          <CharacterBox {...character} key={character.id} />
+        ))}
+      </div>
       {hasMore && <div ref={loaderRef}>Loading…</div>}
     </div>
   );

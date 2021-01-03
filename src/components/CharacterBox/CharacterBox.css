@@ -1,28 +1,39 @@
 .name {
-  font-size: 1.2rem;
-}
-
-img {
-  /* width: 25vw;
-  max-height: 26vh; */
-  /* height: 23vh; */
-  /* height: 24vh; */
-  /* width:250px; */
-  /* min-width: 250px; */
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+  font-family: "avengero";
   position: absolute;
-  top: -9999px;
-  left: -9999px;
-  right: -9999px;
-  bottom: -9999px;
-  margin: auto;
-  max-height: 100%;
-  max-width: 100%;
+  z-index: 1;
+  top: 0.5rem;
+  left: 0.5rem;
 }
 
 .box {
-  /* flex-basis: auto; */
+  cursor: pointer;
   position: relative;
-  width: 400px;
-  height: 400px;
-  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  border-color: #292929;
+  border-style: solid;
+  border-width: 1px;
+}
+
+img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.wordwrap {
+  white-space: pre-wrap; /* CSS3 */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
 }
