@@ -1,0 +1,10 @@
+.character-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100vh;
+  /* width: 220px; */
+  overflow-y: auto;
+  /* display: grid; */
+  /* justify-content: center; */
+  /* gap: 10px; */
+}

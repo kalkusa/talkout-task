@@ -1,0 +1,28 @@
+.name {
+  font-size: 1.2rem;
+}
+
+img {
+  /* width: 25vw;
+  max-height: 26vh; */
+  /* height: 23vh; */
+  /* height: 24vh; */
+  /* width:250px; */
+  /* min-width: 250px; */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.box {
+  /* flex-basis: auto; */
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+}
