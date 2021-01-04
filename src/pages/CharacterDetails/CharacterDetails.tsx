@@ -6,6 +6,7 @@ import {
   CharacterDetails as CharacterInformation,
 } from "../../utils/MarvelAPIReader";
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 type TParams = { id: string };
 
@@ -14,7 +15,11 @@ export const CharacterDetails = ({ match }: RouteComponentProps<TParams>) => {
     characterInformation,
     setCharacterInformation,
   ] = useState<CharacterInformation>();
+  const history = useHistory();
 
+  function handleClick() {
+    history.push(`/`);
+  }
   useEffect(() => {
     const apiReader = new MarvelApiReader();
     async function fetchCharacters() {
@@ -34,25 +39,25 @@ export const CharacterDetails = ({ match }: RouteComponentProps<TParams>) => {
           alt={characterInformation?.name}
         />
       </div>
-      <div className="character-info">
-        <div className="character-name">
-          <span>Name:</span> {characterInformation?.name}
-        </div>
-        <div className="character-description">
-          <span>Description:</span>
-          {characterInformation?.description
-            ? characterInformation?.description
-            : "No description"}
-        </div>
-
-        <div className="character-comics">
-          Comics:
-          <ul>
-            {characterInformation?.comics.map((comic) => (
-              <li>{comic.name}</li>
-            ))}
-          </ul>
-        </div>
+      <div className="character-name-label">Name:</div>
+      <div className="character-name">{characterInformation?.name}</div>
+      <div className="character-description-label">Description:</div>
+      <div className="character-description">
+        {characterInformation?.description
+          ? characterInformation?.description
+          : "No description"}
+      </div>
+      <div className="character-comics-label">Comics:</div>
+      <div className="character-comics">
+        {characterInformation?.comics.map((comic) => (
+          <span className="comma-separated">{comic.name}</span>
+        ))}
+      </div>
+      <div className="back-to-list" onClick={handleClick}>
+        &larr;
+      </div>
+      <div className="mobile">
+        Mobile view not prepared, but of course I could do it...
       </div>
     </div>
   );
