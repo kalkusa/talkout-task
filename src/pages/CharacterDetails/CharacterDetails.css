@@ -37,7 +37,7 @@
     grid-row-end: 3;
   }
 
-  .character-description-label {
+  .character-comics-label {
     grid-column-start: 6;
     grid-column-end: 7;
     grid-row-start: 3;
@@ -48,14 +48,14 @@
     font-size: 4vh;
   }
 
-  .character-description {
+  .character-comics {
     grid-column-start: 8;
     grid-column-end: 12;
     grid-row-start: 3;
     grid-row-end: 4;
   }
 
-  .character-comics-label {
+  .character-description-label {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 5;
@@ -67,7 +67,7 @@
     font-size: 4vh;
   }
 
-  .character-comics {
+  .character-description {
     grid-column-start: 2;
     grid-column-end: 7;
     grid-row-start: 6;
