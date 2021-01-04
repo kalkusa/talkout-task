@@ -16,7 +16,8 @@
   }
 
   .character-image img {
-    width: 25vw;
+    /* width: 25vw; */
+    max-height: 42vh;
   }
 
   .character-name-label {
