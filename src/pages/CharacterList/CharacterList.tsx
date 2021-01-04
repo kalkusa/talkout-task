@@ -15,7 +15,7 @@ export const CharacterList: React.FC<Props> = (props) => {
     (async () => {
       const apiReader = new MarvelApiReader();
       const realPage = page + 1;
-      const data = await apiReader.getCharacters(20, (realPage - 1) * 20);
+      const data = await apiReader.getCharacters(50, (realPage - 1) * 50);
       setHasMore(true); //api returns so huge amount of characters we can ignore it for now
       setItems((prev) => [...prev, ...data]);
     })();
