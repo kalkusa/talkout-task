@@ -26,3 +26,8 @@ code {
   font-family: "avengero";
   src: local("avengero"), url(./fonts/avengero.ttf) format("truetype");
 }
+
+@font-face {
+  font-family: "ironFist";
+  src: local("ironFist"), url(./fonts/ironFist.ttf) format("truetype");
+}

@@ -13,7 +13,6 @@ export const CharacterList: React.FC<Props> = (props) => {
 
   useEffect(() => {
     (async () => {
-      console.log("effect");
       const apiReader = new MarvelApiReader();
       const realPage = page + 1;
       const data = await apiReader.getCharacters(20, (realPage - 1) * 20);
