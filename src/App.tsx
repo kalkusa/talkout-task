@@ -9,12 +9,8 @@ const App = (): JSX.Element => {
     <Router>
       <div>
         <Switch>
-          <Route path="/character" exact>
-            <CharacterDetails />
-          </Route>
-          <Route path="/">
-            <CharacterList />
-          </Route>
+          <Route path="/character/:id" exact component={CharacterDetails} />
+          <Route path="/" component={CharacterList} />
         </Switch>
       </div>
     </Router>

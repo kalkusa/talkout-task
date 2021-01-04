@@ -8,7 +8,7 @@ export const CharacterBox: React.FC<Character> = (props) => {
   const history = useHistory();
 
   function handleClick() {
-    history.push(`/character?id=${id}`);
+    history.push(`/character/${id}`);
   }
 
   //For the demo purpose we filter out characters without image
