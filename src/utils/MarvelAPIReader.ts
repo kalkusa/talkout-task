@@ -32,7 +32,6 @@ export class MarvelApiReader {
 
   constructor() {
     this.#hash = md5(1 + this.#privateKey + this.#apiKey).toString();
-
     this.#apiKey = "2e0935f80f3cad05b5d287c0d2eab0c1";
   }
 
