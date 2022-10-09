@@ -11,15 +11,15 @@ import { useHistory } from "react-router-dom";
 type TParams = { id: string };
 
 export const CharacterDetails = ({ match }: RouteComponentProps<TParams>) => {
-  const [
-    characterInformation,
-    setCharacterInformation,
-  ] = useState<CharacterInformation>();
+  const [characterInformation, setCharacterInformation] =
+    useState<CharacterInformation>();
+
   const history = useHistory();
 
   function handleClick() {
     history.push(`/`);
   }
+
   useEffect(() => {
     const apiReader = new MarvelApiReader();
     async function fetchCharacters() {
